@@ -1,8 +1,10 @@
 import express, {json} from 'express';
 import posts from './routes/api/posts.js';
+import cors from 'cors';
 
 const app = express();
 app.use(json({extended: false}));
+app.use(cors());
 
 app.use('/posts', posts);
 
