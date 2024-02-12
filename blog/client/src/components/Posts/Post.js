@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { createPost } from "../../actions/post";
 
 const Post = () => {
@@ -12,14 +12,10 @@ const Post = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={e => onSubmit(e)}>
-                <div>
-                <input name="text" placeholder="Create a Post" required value={text} onChange={e => setText(e.target.value)}></input>
-                </div>
-                <input type="submit" value="Submit"/>
-            </form>
-        </div>
+        <form onSubmit={e => onSubmit(e)}>
+            <input name='text' placeholder="Create a post" required value={text} onChange={e => setText(e.target.value)} />
+            <input type="submit" value="Submit"/>
+        </form>
     )
 }
 
