@@ -15,7 +15,7 @@ const Comment = ({postId}) => {
     return (
         <form onSubmit={e => onSubmit(e)}>
             <h6>New Comment</h6>
-            <input value={comment} onChange={e => setComment(e.target.value)} placeholder="Create a post"/>
+            <input value={comment} onChange={e => setComment(e.target.value)} placeholder="Create a comment"/>
             <button>Submit</button>
         </form>
     );

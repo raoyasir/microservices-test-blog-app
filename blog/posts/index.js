@@ -6,6 +6,7 @@ const app = express();
 app.use(json({extended: false}));
 app.use(cors());
 
+app.use('/', posts);
 app.use('/posts', posts);
 
 if(process.env.NODE_ENV === 'production'){
